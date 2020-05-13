@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>New Page</title>
+    <meta name="keywords" content="网址导航,开始,JBLOG,jblog,osgo,简约,浏览器,起始页">
+	<meta name="description" content="浏览器起始页">
+    <link rel="shortcut icon" href="https://i.loli.net/2020/05/13/uZSwoaRM4v5dLmf.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        *{margin: 0;padding: 0;outline: none}
+body{background: #f4f4f4;}
+.container{
+    /*background: #ddd;*/
+    position: fixed;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+}
+h1{
+    font-weight: 100;
+    color: #aaa;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.input{
+    position: relative;
+    width: 650px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(170,170,170,0.17);
+    overflow: hidden;
+}
+/* button */
+.btn-group{
+    display: none;
+    list-style: none;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.btn-group li{
+    display: inline-block;margin: 0 13px;width: 90px;height: 36px;line-height: 36px;
+    text-align: center;color: #666;border-radius: 6px;background-color: #eee;
+}
+.btn-group li:hover{cursor: pointer;}
+.btn-group .this{background-color: #ddd;}
+/* 璁剧疆鏃舵樉绀� */
+.set .btn-group{display: block;}
+.set .input img{transform:rotate(90deg);}
+    /* input */
+.input img{
+    position: absolute;left: 10px;top: 10px;width: 40px;height: 40px;transition: 1s;cursor: pointer;
+}
+.input input{position: absolute;border:none;left: 60px;top: 0;
+    line-height: 60px;height: 60px;width: calc(100% - 60px);color: #666;font-size: 20px;}
+.footer{text-align: center;position: fixed;width: 100vw;bottom: 45px;font-size: 12px;color: #a0a0a0;}
+.footer a{color: #666;}
+
+@media screen and (max-width: 768px) {
+    .container{width: 90%;left: 5%;}
+    .input{width: 100%;height: 50px;}
+    .input img{width: 30px;height: 30px;}
+    .input input{height: 50px;left: 50px;width: calc(100% - 50px);}
+    .btn-group:after {
+        content: '\20';
+        clear: both;
+        display: block;
+        height: 0;
+    }
+    .btn-group li{
+        float: left;
+        margin: 0;
+        width: 23%;
+        margin-right: 2.6666666%;
+        height: 26px;
+        line-height: 26px;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+    .btn-group li:last-child{
+        margin-right: 0;
+    }
+}
+</style>
+    <script language="JavaScript">
+         function Btntest(event)
+
+{
+
+var Num = event.button;
+
+if (Num==2)
+
+  {
+
+  window.location.href='bbx.html';
+
+  }
+
+}
+        function startTime()   
+        {   
+            var today=new Date();//定义日期对象   
+            var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+            var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+            var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+            var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+            var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+            var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒7a64e78988e69d8331333363363537   
+            // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+            MM=checkTime(MM);
+            dd=checkTime(dd);
+            mm=checkTime(mm);   
+            ss=checkTime(ss);    
+            var day; //用于保存星期（getDay()方法得到星期编号）
+            if(today.getDay()==0)   day   =   "星期日 " 
+            if(today.getDay()==1)   day   =   "星期一 " 
+            if(today.getDay()==2)   day   =   "星期二 " 
+            if(today.getDay()==3)   day   =   "星期三 " 
+            if(today.getDay()==4)   day   =   "星期四 " 
+            if(today.getDay()==5)   day   =   "星期五 " 
+            if(today.getDay()==6)   day   =   "星期六 " 
+            document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
+            setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 
+        }   
+         
+        function checkTime(i)   
+        {   
+            if (i<10){
+                i="0" + i;
+            }   
+              return i;
+        }  
+    </script>
+</head>
+<body onload="startTime()"onmousedown="Btntest(event)">
+    
+<div class="container">
+    <h1><a href="bbx.html">Lite New Page</a><br><br><span id="nowDateTimeSpan"></span></h1>
+    <center><p>按下回车完成搜索</p><center>
+    <ul class="btn-group">
+        <li data-logo="logo_baidu">Baidu</li>
+        <li data-logo="logo_google">Google</li>
+        <li data-logo="logo_bing">Bing</li>
+        <li data-logo="logo_doge">Doge</li>
+        <li data-logo="logo_lookao">Lookao</li>
+    </ul>
+    <div class="input">
+        <img src="" id="set">
+        <input type="text" placeholder="Search" id="searchInput" autocomplete="off" >
+    </div>
+    
+</div>
+
+<div class="footer">
+    <a href="https://gitee.com/heyos/newpage">在Gitee上查看     </a>
+    <a href="https://github.com/os-go/newpage">在GitHub上查看</a><br><br>
+    <a href="https://gitee.com/heyos/newpage/blob/master/README.md">使用须知 & 小技巧</a><br><br>
+    <a href="about.html">©2020 JBLOG</a>
+    
+</div>
+<!--<script type="text/javascript" src="jquery.slim.min.js"></script>-->
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
