@@ -1,5 +1,0 @@
-# [下载文件](https://gitee.com/heyos/newpage/repository/archive/master.zip)
-# [Gitee 仓库](https://gitee.com/heyos/newpage/)
-# [GitHub 仓库](https://github.com/os-go/Lite-New-Page)
-# [开源中国](#)
-# [简介](https://gitee.com/heyos/newpage/blob/master/README.md)
