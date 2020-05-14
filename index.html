@@ -127,8 +127,7 @@ if (Num==2)
             if(today.getDay()==4)   day   =   "星期四 " 
             if(today.getDay()==5)   day   =   "星期五 " 
             if(today.getDay()==6)   day   =   "星期六 " 
-            document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +"    " + day;   
-            document.getElemenById('NowTime').innerHTML= hh+":"+mm+":"+ss;
+            document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
             setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 
         }   
          
@@ -144,7 +143,7 @@ if (Num==2)
 <body onload="startTime()"onmousedown="Btntest(event)">
     
 <div class="container">
-    <h1><a href="bbx.html"><span id="NowTime"></span></a><br><br><span id="nowDateTimeSpan"></span></h1>
+    <h1><a href="bbx.html">Lite New Page</a><br><br><span id="nowDateTimeSpan"></span></h1>
     
     <ul class="btn-group">
         <li data-logo="logo_baidu">Baidu</li>
@@ -155,7 +154,7 @@ if (Num==2)
     </ul>
     <div class="input">
         <img src="" id="set">
-        <input type="text" placeholder="按下回车完成搜索" id="searchInput" autocomplete="off" >
+        <input type="text" placeholder="Search      按下回车完成搜索" id="searchInput" autocomplete="off" >
     </div>
     
 </div>
