@@ -165,7 +165,7 @@ svg {
 }
 
 .wh {
-	font-size: 30px;
+	font-size: 15px;
 	font-family: 'Electrolize', sans-serif;
 	white-space: nowrap;
 }
@@ -179,9 +179,9 @@ svg {
 	display: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 15px) {
 	.wh {
-		font-size: 40px;
+		font-size: 15px;
 	}
 
 	.wh:nth-child(1),
@@ -196,7 +196,7 @@ svg {
 
 @media only screen and (min-width: 1200px) {
 	.wh {
-		font-size: 40px;
+		font-size: 15px;
 	}
 
 	.wh:nth-child(1),
@@ -229,17 +229,19 @@ svg {
 		<!-- ALL PANEL CONTENT GOES HERE -->
 		<!-- .flex-container is for demo purposes only -->
 		<div class="flex-container">
-			<span class="wh">请放大窗口</span>
-			<span class="wh">请放大窗口</span>
+			<span class="wh">小窗口/手机暂不支持访问</span>
+			<span class="wh">小窗口/手机暂不支持访问</span>
 			<span class="wh"><center><h2>Lite New Page 是一款简洁的浏览器首页<h3><center>
 				<center><h3>更新版本号：V1.25<h3><center>
 					<center><p>1.增加时钟<br>2.增加 Lookao 搜索引擎<br>3.增加百宝箱（右键点击触发）<p><center> 
-						<center><a href="https://gitee.com/heyos/newpage">有建议反馈 & Gitee仓库</a></center>
-					
-						<a href="https://afdian.net/@os-go">打赏</a>  &  <a href='https://support.qq.com/products/153198?'>反馈</a>
-					
-                    </span>
-                    <marquee  scrolldelay="1500" scrollamount="25">打赏名单公告：暂无！<a href="https://afdian.net/@os-go">点击此处打赏</a></marquee>
+
+					<br>
+            <a href="https://afdian.net/@os-go"style='color:#ddd'>打赏</a>  &  <a href='https://support.qq.com/products/153198?'style='color:#ddd'>反馈</a>
+            <a href="https://gitee.com/heyos/newpage"style='color:#ddd'><br><br>在Gitee上查看     </a>
+    <a href="https://github.com/os-go/newpage"style='color:#ddd'>在GitHub上查看</a><br><br>
+    <a href="https://gitee.com/heyos/newpage/blob/master/README.md"style='color:#ddd'>使用须知 & 小技巧</a><br><br><br><br><br>
+    <marquee  scrolldelay="1500" scrollamount="300" >赞助名单公告：暂无！<a href="https://afdian.net/@os-go" style='color:#87CEFA'>点击此处支持</a></marquee>
+					</span>
 		</div>
 		
 	</div>
@@ -256,8 +258,6 @@ if (!String.prototype.endsWith) {
       return this.substring(this_len - search.length, this_len) === search;
   };
 }
-
-/* Frosted Panel - sourced from https://github.com/cryptodescriptor/frosted-panel */
 
 var frostedPanel = {
   e : {
