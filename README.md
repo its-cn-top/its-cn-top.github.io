@@ -5,8 +5,8 @@ This is A New Page.
 ### 如果你在使用期间出现任何问题，欢迎[点这里进行反馈](http://jonyam2008.mikecrm.com/ojnhc4E)
 
 ## 下载方法
-[Gitee 官方仓库](https://gitee.com/heyos/newpage)
-[GitHub 官方仓库](https://github.com/os-go/Lite-New-Page)
+[Gitee 官方仓库](https://gitee.com/trytoget/Lite-New-Page)
+[GitHub 官方仓库](https://trytoget.gitee.io/lite-new-page/nogit.html)
 [官方网址](http://np.zymail.ga)
 ### Gitee 仓库下载
 ![1.进入 Gitee 官方仓库下载：[https://gitee.com/heyos/newpage](https://gitee.com/heyos/newpage)](https://images.gitee.com/uploads/images/2020/0512/115944_ebd996bb_7552126.png "屏幕截图.png")
@@ -24,26 +24,6 @@ This is A New Page.
 #### 完成下载！
 
 ## 安装方法
-### 本地安装
-![找到下载的文件并解压](https://images.gitee.com/uploads/images/2020/0512/120641_b601374c_7552126.png "屏幕截图.png")
-![找到 index.html 文件](https://images.gitee.com/uploads/images/2020/0512/123438_65eb1da8_7552126.png "屏幕截图.png")
-
-**把 index.html 拖入浏览器内**
-
-![复制完整路径](https://images.gitee.com/uploads/images/2020/0512/123754_17276ff1_7552126.png "屏幕截图.png")
-
-![点击右上角的更多](https://images.gitee.com/uploads/images/2020/0512/122950_c6a7a3fc_7552126.png "屏幕截图.png")
-
-![点击‘设置’](https://images.gitee.com/uploads/images/2020/0512/123118_7f0c0902_7552126.png "屏幕截图.png")
-
-![启动时](https://images.gitee.com/uploads/images/2020/0512/123827_c104910b_7552126.png "屏幕截图.png")
-
-![点击’添加新网页‘](https://images.gitee.com/uploads/images/2020/0512/123937_87d840e2_7552126.png "屏幕截图.png")
-
-![添加](https://images.gitee.com/uploads/images/2020/0512/124040_ab560ea6_7552126.png "屏幕截图.png")
-
-**使用此方法请勿删除本地文件**
-
 ### 在线网页
 ![点击右上角的更多](https://images.gitee.com/uploads/images/2020/0512/122950_c6a7a3fc_7552126.png "屏幕截图.png")
 
@@ -73,9 +53,8 @@ This is A New Page.
 
 <p style="text-align: center;"><img alt="网站底部" src="https://images.gitee.com/uploads/images/2020/0512/181551_54298752_7552126.jpeg" /></p>
 
-<p style="text-align: center;">在网站的底部，我们设有&lsquo;开源仓库&rsquo;，&lsquo;小技巧&rsquo;与&lsquo;关于我们&rsquo;。</p>
+<p style="text-align: center;">在网站的底部，点击关于我们&rsquo;即可查看更多信息。</p>
 
-<p style="text-align: center;">如果你有任何疑问或建议，欢迎在本文章下评论或<a href="https://gitee.com/heyos/newpage"><img alt="Fork me on Gitee" src="https://gitee.com/heyos/newpage/widgets/widget_6.svg?color=3b46bf" /></a></p>
 
 
 
