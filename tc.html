@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>自定义弹窗</title>
+    <title>抱歉</title>
    
     <style>
         /* 弹出框最外层 */
@@ -172,7 +172,7 @@
             title = "提示", //弹窗标题
             contentStyle = {}, //内容样式
             contentFontSize = "1.5em", //内容字体大小
-            btnName = ["确定", "取消"] //按钮文字内容
+            btnName = ["确定", "返回"] //按钮文字内容
         }) {
             //将传入的值绑定到this上 
             this.content = content;
@@ -357,15 +357,15 @@
       <script>
         document.querySelector("button").addEventListener("click",()=>{
           new $Msg({
-            content:"我的自定义弹窗好了",
+            content:"十分抱歉！由于部分原因，百宝箱将更换域名。届时旧域名（本域名）将重定向至新域名。ps.新版本的百宝箱即将上线！点击确定即可跳转",
             type:"success",
             cancle:function(){
               let cancle = new $Msg({
-                content:"我是取消后的回调"
+                window.location.href='index.html';
               })
             },
             confirm:function(){
-              new $Msg({content:"我是确定后的回调"})
+              window.location.href='https://ttgbox.gitee.io/';
             }
           })
         })
