@@ -1,153 +1,55 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>抱歉</title>
+    <meta charset="UTF-8">
+    <title>消息通知</title>
 </head>
-<!-- 样式 -->
-<style type="text/css">
-	/* 弹窗 (background) */
-.modal {
-    display: none; /* 默认隐藏 */
-    /*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    /*设置弹窗位置*/
-    padding-top: 200px;
-    padding-bottom: 300px;
-    /*浮在全屏上*/
-    width: 100%; 
-    height:  100%; 
-    /*overflow：auto；如果内容被修剪，则浏览器会显示滚动条，以便查看其余内容。*/
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
-    text-align: center;
-}
+<body><h2>消息通知</h2>
+<script>
+    window.onload = function () {
+        suportNotify()
+    }
 
-/* 弹窗内容 */
-.modal-content {
-    /*position: relative;*/
-    /*弹窗背景色设置*/
-    background-color: #fefefe;
-    margin: auto;
-    padding: 200px auto;
-    width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
+    //判断浏览器是否支持Web Notifications API
+    function suportNotify(){
+        if (window.Notification) {
+            // 支持
+            console.log("支持"+"Web Notifications API");
+            //如果支持Web Notifications API，再判断浏览器是否支持弹出实例
+            showMess()
+        } else {
+            // 不支持
+            alert("不支持 Web Notifications API");
+        }
+    }
 
-/* 添加动画 */
-@-webkit-keyframes animatetop {
-    from {top:-200px; opacity:0} 
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-200px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-/* 关闭按钮 */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-header {
-	display: block;
-	line-height: 30px;
-    padding: 2px 10px;
-    background-color: blue;
-    color: white;
-    text-align: left;
-}
-
-.modal-body {
-	padding: 2px 16px;
-	font-size: 18px;
-	height: 200px;
-}
-
-.modal-footer {
-	display: block;
-	line-height: 30px;
-    padding: 2px 10px;
-    background-color: blue;
-    color: white;
-}
-</style>
-<!-- js -->
-<script type="text/javascript">
-	function openwindow(){
-		//获取弹窗得div
-		var modal = document.getElementById('myModal');
-		// 获取 <span> 元素，用于关闭弹窗 （X）
-		var span = document.getElementsByClassName("close")[0];
-		//获取弹窗中得确定按钮
-		var ok=document.getElementsByClassName("ok")[0];
-		//获取弹窗中得取消按钮
-		var no=document.getElementsByClassName("no")[0];
-		//窗体弹出
-		modal.style.display = "block";
-		//点击窗体ok
-		ok.onclick=function(){
-			//执行弹出窗体得确定后得操作
-			window.location.href='https://ttgbox.gitee.io';
-			//关闭窗口
-			modal.style.display = "none";
-		}
-		//点击窗体取消按钮
-		no.onclick=function(){
-			//直接关闭窗口
-			window.location.href='index.html';
-		}
-		// 点击 <span> (x), 关闭弹窗
-		span.onclick = function() {
-			//直接关闭窗口
-			window.location.href='index.html';
-		}
-		// 在用户点击其他地方时，关闭弹窗
-		window.onclick = function(event) {
-			//点击窗口外内容，关闭窗口
-			if (event.target == modal) window.location.href='https://ttgbox.gitee.io';
-		}
-	}
+    //判断浏览器是否支持弹出实例
+    function showMess(){
+        setTimeout(function () {
+            console.log('1：'+Notification.permission);
+            //如果支持window.Notification 并且 许可不是拒绝状态
+            if(window.Notification && Notification.permission !== "denied") {
+                //Notification.requestPermission这是一个静态方法，作用就是让浏览器出现是否允许通知的提示
+                Notification.requestPermission(function(status) {
+                    console.log('2: '+status);
+                    //如果状态是同意
+                    if (status === "granted") {
+                        var m = new Notification('紧急通知', {
+                            body: '以下是目前我们持续运营的网址：https://trytoget.gitee.io/lite-new-page/index.html ； http://np.zymail.ga ； http://zymail.ga .如果你使用过或正在使用不在清单内的域名，请立即核对并通过支持论坛进行反馈!我们开源仅供大家学习使用，使用 Apache License 2.0 进行开源.感谢各位长久以来的支持',　　//消息体内容
+                            icon:"https://i.loli.net/2020/05/13/uZSwoaRM4v5dLmf.png"　　//消息图片
+                        });
+                        m.onclick = function () {//点击当前消息提示框后，跳转到当前页面
+                            myWindow=window.open('https://trytoget.gitee.io/lite-new-page/index.html');
+	                        myWindow.focus();
+                        }
+                    } else{
+                        alert('当前浏览器不支持弹出消息')
+                    }
+                });
+            }
+        },1000)
+    }
 </script>
-<body>
-	<div align="center" style="margin: 50 auto">
-		<h2></h2>
-		
-	</div>
-	<!-- 弹窗隐藏区域 -->
-
-		  <!-- 弹窗内容 -->
-			<div class="modal-content">
-			  <div class="modal-header">
-			    <span class="close">&times;</span>
-			    <h2>通知</h2>
-			  </div>
-			  <div class="modal-body">
-			  	<p>十分抱歉！由于部分原因，百宝箱将更换域名。届时旧域名（本域名）将重定向至新域名。<br>ps.新版本的百宝箱即将上线！点击确定即可跳转</p>
-			
-			  </div>
-			  <div class="modal-footer">
-			   <button class="ok">确定</button>&nbsp;<button class="no">返回</button>
-			  </div>
-			</div>
-	</div>
 </body>
 </html>
