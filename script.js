@@ -52,7 +52,11 @@ document.getElementById('searchInput').onkeydown=function(e){
                 url='https://www.dogedoge.com/results?q=';
                 break;
             case 'Lookao':
-                url='https://lookao.com/search?q='
+                url='https://lookao.com/search?q=';
+                break;
+            case 'ZhiHu':
+                url='https://www.zhihu.com/search?type=content&q=';
+                break;
         }
         location.href=url+$(this).val();
 }
