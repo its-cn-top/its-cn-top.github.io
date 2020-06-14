@@ -59,7 +59,7 @@ document.getElementById('searchInput').onkeydown=function(e){
                 break;
                 case 'BiliBili':
                 url='https://search.bilibili.com/all?keyword=';
-            
+                break;
                 
         }
         location.href=url+$(this).val();
