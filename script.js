@@ -57,9 +57,7 @@ document.getElementById('searchInput').onkeydown=function(e){
             case 'ZhiHu':
                 url='https://www.zhihu.com/search?type=content&q=';
                 break;
-                case 'BiliBili':
-                url='https://search.bilibili.com/all?keyword=';
-                break;
+            
                 
         }
         location.href=url+$(this).val();
