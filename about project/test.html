@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>test</title>
+     <style>
+         .div1 {
+position: absolute;
+right: 16px;
+top: 10%;
+z-index: 12;
+}
+.div2 {
+border-radius: 10px 0 0 10px;
+width: 25px;
+height: 25px;
+float: left;
+cursor: pointer;
+background-color: rgb(0, 198, 255);
+}
+.div2>i {
+font-size: 22px;
+margin-left: 10%;
+margin-top: 5%;
+}
+.div3 {
+height: 56px;
+width: 172px;
+padding-top: 3px;
+padding-left: 3px;
+padding-right: 3px;
+padding-bottom: 3px;
+float: left;
+background-color: white;
+border: 1px solid rgb(0, 198, 255)
+}
+</style>
+</head>
+<body>
+    <div id="div1" class="div1">
+<div id="div2" class="div2" onclick="test()">
+<i class="fa fa-question-circle"></i>
+</div>
+<div id="div3" class="div3" hidden="true">
+<label style="font-weight: normal;font-size: 10px"></label>
+</div>
+</div>
+<script>
+    function test() {
+if ($("#div3").is(":hidden")) {
+$("#div3").show(300);
+} else {
+$("#div3").hide(300);
+}
+}
+</script>
+</body>
+</html>
