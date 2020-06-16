@@ -10,27 +10,22 @@
 </head>
 <body>
 <script>
-    toastr.options = { // toastr配置
-        "closeButton": true, //是否显示关闭按钮
-        "debug": false, //是否使用debug模式
-        "progressBar": true, //是否显示进度条，当为false时候不显示；当为true时候，显示进度条，当进度条缩短到0时候，消息通知弹窗消失
-        "positionClass": "toast-top-center",//显示的动画时间
-        "showDuration": "400", //显示的动画时间
-        "hideDuration": "1000", //消失的动画时间
-        "timeOut": "7000", //展现时间
-        "extendedTimeOut": "1000", //加长展示时间
-        "showEasing": "swing", //显示时的动画缓冲方式
-        "hideEasing": "linear", //消失时的动画缓冲方式
-        "showMethod": "fadeIn", //显示时的动画方式
-        "hideMethod": "fadeOut" //消失时的动画方式
-    }
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-right",
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 
-    //调用方式
-    toastr.error("连接不能打开！");
-    toastr.success("连接已建立，可以进行通信！")
-    toastr.success("连接已建立，可以进行通信！", "成功")
-    toastr.warning("连接建立失败，请重试！")
-    toastr.info("请先登录！")
+toastr.info("你的起始页已更新，增加知乎搜索。", "最新版本")
 </script>
 </body>
 </html>
