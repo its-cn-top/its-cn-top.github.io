@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="manifest" href="manifest.json">
-    <script>
-       
-    </script>
+       <link href="//cdn.bootcss.com/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="//cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <title>New Page</title>
     <link rel="shortcut icon" href="https://i.loli.net/2020/05/13/uZSwoaRM4v5dLmf.png">
    <!-- 搜索引擎定位 -->
@@ -212,6 +213,23 @@ if (Num==2)
     <!-- 时钟结束 -->
 </head>
 <body onload="startTime()"onmousedown="Btntest(event)">
+    <script>
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-right",
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+toastr.info("你的起始页已增加知乎搜索，赶快去试试吧。", "最新版本")
+</script>
 <div> 
 <div class="container">
     <h1><a href="bbx.html" style='color:#000'><span id="nowDateTimeSpan"></span></a></h1>
