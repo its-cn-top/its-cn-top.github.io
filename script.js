@@ -37,7 +37,7 @@ $('.btn-group li').click(function(){
 document.getElementById('searchInput').onkeydown=function(e){
    if(e.keyCode==13){
        let type=localStorage.getItem('type');
-       let url='';
+       let url='https://cn.bing.com/search?FORM=BESBTB&q=';
         switch (type) {
             case 'Baidu':
                 url='https://www.baidu.com/s?wd=';
