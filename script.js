@@ -39,22 +39,22 @@ document.getElementById('searchInput').onkeydown=function(e){
        let type=localStorage.getItem('type');
        let url='';
         switch (type) {
-            case '百度':
+            case 'Baidu':
                 url='https://www.baidu.com/s?wd=';
                 break;
-            case '谷歌':
+            case 'Google':
                 url='https://www.google.com/search?q=';
                 break;
-            case '必应':
+            case 'Bing':
                 url='https://cn.bing.com/search?FORM=BESBTB&q=';
                 break;
-            case '多吉':
+            case 'Doge':
                 url='https://www.dogedoge.com/results?q=';
                 break;
             case 'Lookao':
                 url='https://lookao.com/search?q=';
                 break;
-            case '知乎':
+            case 'ZhiHu':
                 url='https://www.zhihu.com/search?type=content&q=';
                 break;
             
